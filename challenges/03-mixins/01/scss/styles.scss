@@ -13,6 +13,23 @@
 	}
 }
 
+@mixin ui-element(
+	$size,
+	$color,
+	$bg-color,
+	$hover-color: $color,
+	$hover-bg-color: $bg-color
+) {
+	padding: $size calc($size * 3);
+	color: $color;
+	background-color: $bg-color;
+
+	&:hover {
+		color: $hover-color;
+		background-color: $hover-bg-color;
+	}
+}
+
 body {
 	font-family: system-ui;
 	margin: 0;
@@ -39,4 +56,20 @@ body {
 
 .section-three {
 	@include gradient(90deg, purple, yellow);
+}
+
+.button-one {
+	@include ui-element(1rem, red, blue, green, orange);
+}
+
+.button-two {
+	@include ui-element(1rem, blue, red, orange, green);
+}
+
+.badge-one {
+	@include ui-element(1rem, red, blue);
+}
+
+.badge-two {
+	@include ui-element(1rem, blue, red);
 }

@@ -31,4 +31,44 @@ body {
   background-image: linear-gradient(90deg, purple, yellow);
 }
 
+.button-one {
+  padding: 1rem 3rem;
+  color: red;
+  background-color: blue;
+}
+.button-one:hover {
+  color: green;
+  background-color: orange;
+}
+
+.button-two {
+  padding: 1rem 3rem;
+  color: blue;
+  background-color: red;
+}
+.button-two:hover {
+  color: orange;
+  background-color: green;
+}
+
+.badge-one {
+  padding: 1rem 3rem;
+  color: red;
+  background-color: blue;
+}
+.badge-one:hover {
+  color: red;
+  background-color: blue;
+}
+
+.badge-two {
+  padding: 1rem 3rem;
+  color: blue;
+  background-color: red;
+}
+.badge-two:hover {
+  color: blue;
+  background-color: red;
+}
+
 /*# sourceMappingURL=styles.css.map */
