@@ -1,11 +1,42 @@
+@mixin gradient($angle, $clr-1, $clr-2) {
+	background-image: linear-gradient($angle, $clr-1, $clr-2);
+}
+
+@mixin pseudo-underline($width, $height, $background-color, $margin) {
+	&::after {
+		content: "";
+		display: block;
+		width: $width;
+		height: $height;
+		background-color: $background-color;
+		margin: $margin auto;
+	}
+}
+
 body {
-  font-family: system-ui;
-  margin: 0;
+	font-family: system-ui;
+	margin: 0;
+}
+
+.title {
+	@include pseudo-underline(5rem, 1px, currentcolor, 2rem);
 }
 
 .section-one,
 .section-two,
 .section-three {
-  text-align: center;
-  padding: 10vh 0;
+	text-align: center;
+	padding: 10vh 0;
+}
+
+.section-one {
+	@include gradient(-29deg, red, blue);
+}
+
+.section-two {
+	@include gradient(1deg, white, black);
+}
+
+.section-three {
+	@include gradient(90deg, purple, yellow);
 }
